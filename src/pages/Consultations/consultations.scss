@@ -1,0 +1,58 @@
+@import '../../stylesheets/base/colors';
+
+.consultations {
+  .wrapper {
+    .tableContainer {
+      .button1,
+      .button2 {
+        &:hover {
+          background-color: $primary;
+        }
+      }
+
+      .button1Active,
+      .button2Active {
+        background-color: $primary;
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    padding-top: 3rem;
+
+    .wrapper {
+      .introMessage {
+        p {
+          font-size: 17px;
+        }
+      }
+
+      .tableContainer {
+        tbody {
+          tr {
+            display: flex;
+            flex-direction: column;
+
+            td {
+              width: 100%;
+
+              button {
+                width: 100%;
+                justify-content: start;
+                padding-left: 1rem;
+              }
+            }
+          }
+
+          .resultContainer {
+            td {
+              p {
+                line-height: 1.3rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

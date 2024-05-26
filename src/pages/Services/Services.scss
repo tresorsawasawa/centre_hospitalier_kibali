@@ -1,0 +1,156 @@
+@import '../../stylesheets/base/colors';
+
+.services {
+  padding-top: 12rem;
+
+  .wrapper {
+    .inner {
+      .servicesContent {
+        grid-gap: 24px;
+        grid-template-columns: repeat(3, 327px);
+
+        .card {
+          box-shadow: 0 2px 4px #8c8c8c8c;
+        }
+
+        .title {
+          font-size: calc(1.275rem + 0.3vw);
+        }
+      }
+    }
+
+    .row {
+      .inner1 {
+        .aboutLeft {
+          .buttonsContainer {
+            a {
+              padding: 12px 20px;
+              background: $dark;
+              border-radius: 3rem;
+              border: none;
+              outline: none;
+              cursor: pointer;
+
+              &:hover {
+                background: $white !important;
+                border: 1px solid $dark;
+                color: $dark !important;
+              }
+
+              &:focus {
+                background: $dark;
+                color: $white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.appointmentTitle,
+.sectionTitle {
+  &::after {
+    content: '';
+    position: absolute;
+    background: $grayColor;
+    width: 92px;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.appointmentTitle {
+  &::after {
+    width: 140px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .services {
+    .wrapper {
+      .row {
+        .inner1 {
+          flex-direction: column;
+
+          .aboutLeft,
+          .aboutRight {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .services {
+    padding-top: 4rem;
+
+    .wrapper {
+      .inner {
+        .headings {
+          .heroText {
+            font-size: 2rem;
+            line-height: 2.5rem;
+          }
+        }
+      }
+
+      .row {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+
+        .inner1 {
+          .aboutLeft {
+            gap: 1.5rem;
+
+            .headings {
+              .heroText {
+                font-size: 2rem;
+                line-height: 2.5rem;
+              }
+            }
+
+            .description {
+              font-size: 1rem;
+            }
+
+            .buttonsContainer {
+              gap: 1.5rem;
+              padding-top: 0.5rem;
+
+              .button {
+                font-size: 1rem;
+                padding: 10px 1rem;
+              }
+            }
+          }
+
+          .aboutRight {
+            .row {
+              .heading {
+                font-size: 1.5rem;
+              }
+
+              .form {
+                flex-direction: column;
+
+                input,
+                select {
+                  border-radius: 0.5rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .testimonialWrapper {
+      padding-top: 6rem;
+    }
+  }
+}

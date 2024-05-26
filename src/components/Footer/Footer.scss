@@ -1,0 +1,82 @@
+@import '../../stylesheets/base/colors';
+
+.footer {
+  background-color: $dark;
+
+  .wrapper {
+    position: relative;
+    margin: 0 auto;
+  }
+
+  h4 {
+    color: $primary;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      height: 2px;
+      width: 4rem;
+      background-color: #fff;
+      top: 2rem;
+      left: 0;
+    }
+  }
+
+  .linksCont {
+    .linkItem {
+      &:hover {
+        a {
+          color: $dark;
+        }
+      }
+    }
+  }
+
+  .exploreItem {
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  .primCol {
+    color: $primary;
+  }
+
+  .copyWrightCont {
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background-color: #354f8e;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    .wrapper {
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+  }
+
+  @media screen and (max-width: 698px) {
+    .wrapper {
+      flex-direction: column;
+      justify-content: center;
+      align-items: start;
+    }
+  }
+
+  @media screen and (max-width: 498px) {
+    .copyWrightCont {
+      p {
+        font-size: 14px !important;
+        text-align: center;
+      }
+    }
+  }
+}

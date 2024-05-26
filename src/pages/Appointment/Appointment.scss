@@ -1,0 +1,91 @@
+@import '../../stylesheets/base/colors';
+
+.appointment {
+  .inner {
+    .aboutLeft {
+      .buttonsContainer {
+        a {
+          padding: 12px 20px;
+          background: $primary;
+          border-radius: 3rem;
+          border: none;
+          outline: none;
+          cursor: pointer;
+
+          &:hover {
+            background: $white !important;
+            border: 1px solid $dark;
+            color: $dark !important;
+          }
+
+          &:focus {
+            background: $dark;
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 992px) {
+    .inner {
+      flex-direction: column;
+
+      .aboutLeft,
+      .aboutRight {
+        width: 100%;
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    padding-top: 3rem;
+
+    .inner {
+      .aboutLeft {
+        gap: 1.5rem;
+
+        .headings {
+          .heroText {
+            font-size: 2rem;
+            line-height: 2.5rem;
+          }
+        }
+
+        .description {
+          font-size: 1rem;
+        }
+
+        .buttonsContainer {
+          gap: 1.5rem;
+          padding-top: 0.5rem;
+
+          .button {
+            font-size: 1rem;
+            padding: 10px 1rem;
+          }
+        }
+      }
+
+      .aboutRight {
+        .row {
+          padding-top: 1rem;
+          padding-bottom: 2rem;
+
+          .heading {
+            font-size: 1.5rem;
+          }
+
+          .form {
+            flex-direction: column;
+
+            input,
+            select {
+              border-radius: 0.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
