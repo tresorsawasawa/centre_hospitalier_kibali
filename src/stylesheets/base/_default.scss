@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import '../base/colors';
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff;
+  // background-color: $light;
+  color: $textColor;
+}
+
+.btn {
+  padding: 12px 20px;
+  background: $gradientColor;
+  border-radius: 3rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  &:hover {
+    background: $primary;
+  }
+
+  &:focus {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
+  }
+}
+
+.titleAfter {
+  background: #10b5cb;
+  bottom: 5px;
+  content: "";
+  height: 6px;
+  position: absolute;
+  left: 0;
+  width: 120px;
+  z-index: -1;
+}
+
+select {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.brd8 {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.padTop50 {
+  margin-top: -8rem !important;
+}
+
+.padTop51 {
+  margin-top: -13rem !important;
+}
+
+textarea,
+input {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  left: auto;
+  box-shadow:
+    0 10px 15px -3px rgba(46, 41, 51, 0.08),
+    0 4px 6px -2px rgba(71, 63, 79, 0.16);
+  font-size: 0.875rem;
+  z-index: 9999;
+  min-width: 10rem;
+  padding: 0.5rem 0;
+  list-style: none;
+  background-color: #fff;
+  border-radius: 0.5rem;
+}
+
+.dropdown.show {
+  background: $light;
+  top: 2rem;
+  display: block;
+  z-index: 9;
+}
+
+.dropdown .dropdown-submenu {
+  position: absolute;
+  left: 100%;
+  top: -7px;
+}

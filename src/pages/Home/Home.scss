@@ -1,0 +1,190 @@
+@import '../../stylesheets/base/mixins';
+@import '../../stylesheets/index.scss';
+
+.hero {
+  background: url(../../assets/images/hero.jpg) top right no-repeat;
+  background-size: cover;
+  height: 100vh;
+  height: 100%;
+  padding-bottom: 3rem;
+
+  .wrapper {
+    .welcomeAd {
+      @include flex-start(column);
+
+      background-color: $dark;
+      border-radius: 3.5rem;
+      width: fit-content;
+
+      h5 {
+        z-index: 2;
+        text-align: center;
+      }
+
+      .background {
+        position: absolute;
+        background-color: $primary;
+        width: 5.4rem;
+        height: 80%;
+        left: 8px;
+        border-radius: 3rem;
+      }
+    }
+
+    .heroText {
+      max-width: 60%;
+      left: 48px;
+      letter-spacing: 1px;
+    }
+
+    .desc {
+      max-width: 50%;
+    }
+  }
+}
+
+.appointment {
+  .inner {
+    .aboutLeft {
+      .buttonsContainer {
+        a {
+          padding: 12px 20px;
+          background-color: $dark !important;
+          border-radius: 3rem;
+          border: none;
+          outline: none;
+          cursor: pointer;
+
+          &:hover {
+            background: $white !important;
+            border: 1px solid $dark;
+            color: $dark !important;
+          }
+
+          &:focus {
+            background: $dark;
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+}
+
+.search {
+  .wrapper {
+    .inner {
+      .headings {
+        .secTitle {
+          &::after {
+            content: '';
+            position: absolute;
+            background: $grayColor !important;
+            width: 155px;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.services {
+  padding-top: 2rem !important;
+}
+
+.testimonials {
+  padding-top: 5rem;
+}
+
+@media screen and (max-width: 992px) {
+  .hero {
+    .wrapper {
+      .heroText {
+        font-size: 3rem;
+        line-height: 4rem;
+        max-width: 70%;
+        text-shadow:
+          2px 2px 5px black,
+          -1px -1px 2px gray;
+      }
+
+      .desc {
+        text-shadow:
+          2px 2px 5px black,
+          -1px -1px 2px gray;
+        max-width: 70%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    padding-top: 4rem;
+
+    .wrapper {
+      .heroText {
+        max-width: 90%;
+      }
+
+      .desc {
+        max-width: 90%;
+      }
+
+      .buttonsContainer {
+        gap: 1.5rem;
+
+        .btn {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+
+  .about {
+    margin-top: 0;
+  }
+
+  .services {
+    padding-top: 4rem;
+
+    .wrapper {
+      .inner {
+        .headings {
+          .heroText {
+            font-size: 2rem !important;
+            line-height: 2.5rem !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .hero {
+    .wrapper {
+      .welcomeAd {
+        width: 100%;
+
+        .welcomeText {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .hero {
+    .wrapper {
+      .buttonsContainer {
+        flex-direction: column;
+        gap: 1rem;
+      }
+    }
+  }
+}

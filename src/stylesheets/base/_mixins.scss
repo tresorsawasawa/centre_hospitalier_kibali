@@ -1,0 +1,82 @@
+@import './colors';
+
+@mixin navLinkActiveHove {
+  content: "";
+  position: absolute;
+  top: 2.5rem;
+  right: 0;
+  width: 100%;
+  height: 3px;
+  background-color: $primary;
+}
+
+@mixin blur_blue {
+  background: #acaeb1;
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(212px);
+  z-index: 1;
+}
+
+@mixin flex-center($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+@mixin flex-center-start($direction) {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+@mixin flex-start-center($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: $direction;
+}
+
+@mixin flex-start($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: $direction;
+}
+
+@mixin flex-start-top($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: $direction;
+}
+
+@mixin flex-between($direction) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+@mixin flex-between-start($direction) {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: $direction;
+}
+
+@mixin flex-center-end($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: $direction;
+}
+
+@mixin flex-evenly($direction) {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-direction: $direction;
+}

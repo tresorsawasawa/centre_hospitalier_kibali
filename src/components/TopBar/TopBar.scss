@@ -1,0 +1,51 @@
+@import '../../stylesheets/base/colors';
+
+.topInfo {
+  border-bottom: 1px solid #dee2e6;
+  padding-right: 1.3rem;
+
+  .wrapper {
+    .socials {
+      a {
+        &:hover {
+          color: #848e9f;
+          transition: 0.3s ease-in-out;
+        }
+      }
+    }
+
+    .flags {
+      .flagItem {
+        cursor: pointer !important;
+
+        &:hover {
+          transform: scale(1.11);
+          transition: 0.3s ease-in-out;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    border: none;
+    background: transparent;
+
+    .wrapper {
+      position: relative;
+
+      .contentNumEmail,
+      .socials {
+        display: none;
+      }
+
+      .flags {
+        position: fixed;
+        top: 0.4rem;
+
+        .flagItem {
+          z-index: 999;
+        }
+      }
+    }
+  }
+}

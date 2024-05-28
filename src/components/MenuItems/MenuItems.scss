@@ -1,0 +1,154 @@
+@import '../../stylesheets/base/colors';
+@import '../../stylesheets/base/mixins';
+
+.header {
+  margin: 0 auto;
+
+  .LogoContainer {
+    width: 150px;
+    height: 80px;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .navbar {
+    .navLinks {
+      .linkItem {
+        color: $textColor;
+
+        &:hover {
+          color: $primary;
+        }
+
+        .dropdown {
+          background-color: $white;
+          top: 3.3rem;
+          padding: 1rem;
+          display: none;
+          gap: 0.5rem;
+          left: -1.5rem;
+          box-shadow: 0 2px 4px #8c8c8c8c;
+
+          .navItem {
+            .subNavLink {
+              font-weight: 500;
+            }
+
+            &:hover .subNavLink {
+              position: relative;
+              color: $primary;
+
+              &::after {
+                content: "";
+                position: absolute;
+                background-color: $primary;
+                height: 1.5px;
+                width: 100%;
+                top: 1.5rem;
+                left: 0;
+              }
+            }
+          }
+
+          &.active {
+            display: none;
+          }
+
+          &.showPopup {
+            display: block !important;
+          }
+        }
+
+        .navLink {
+          position: relative;
+
+          &:hover {
+            color: $primary;
+          }
+
+          &.active {
+            color: $primary;
+
+            &::after {
+              @include navLinkActiveHove;
+            }
+          }
+        }
+      }
+
+      .showPopup .dropdown {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: flex-start;
+      }
+    }
+  }
+
+  @media screen and (max-width: 992px) {
+    .hamburger {
+      display: block;
+    }
+
+    .navbarContainer {
+      position: absolute;
+      height: max-content;
+      background-color: $white;
+      border-radius: 1rem;
+      width: 90%;
+      left: 50%;
+      top: -500px;
+      box-shadow: 0 2px 4px #8c8c8c8c;
+      transform: translate(-50%);
+      transition: -9s ease-in-out;
+      z-index: 9999 !important;
+
+      .navLinks {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding-top: 3rem;
+        padding-bottom: 1.5rem;
+        z-index: 999;
+
+        .linkItem {
+          position: relative;
+
+          .dropdown {
+            position: absolute;
+            left: 8rem !important;
+            top: 1rem;
+            gap: 1rem;
+            z-index: 999;
+          }
+        }
+      }
+
+      .closeMenu {
+        position: absolute;
+        display: block;
+        top: 1rem;
+        right: 1rem;
+        cursor: pointer !important;
+
+        &:hover {
+          transform: scale(1.12);
+          transition: 0.3s all ease-in-out;
+        }
+
+        &:active {
+          color: $primary;
+          transition: 0.3s all ease-in-out;
+        }
+      }
+    }
+
+    .activeNavbar {
+      top: 5rem;
+      transition: -9s ease-in-out;
+      z-index: 999 !important;
+    }
+  }
+}

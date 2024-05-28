@@ -1,0 +1,75 @@
+.contact {
+  overflow: hidden;
+  padding-top: 12rem;
+
+  .wrapper {
+    .inner {
+      .cards {
+        .ServiceItem {
+          .card {
+            box-shadow: 0 2px 4px #8c8c8c8c;
+          }
+        }
+      }
+
+      .formContainer {
+        .formControl {
+          textarea,
+          input {
+            box-shadow: 0 2px 4px #8c8c8c8c;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 980px) {
+    .inner {
+      .cards {
+        padding-bottom: 2rem;
+
+        .ServiceItem {
+          .card {
+            flex-wrap: wrap;
+            gap: 2rem;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 980px) {
+    .inner {
+      .cards {
+        flex-direction: column;
+
+        .ServiceItem {
+          width: 100%;
+          max-width: 100%;
+
+          .card {
+            flex-wrap: wrap;
+            gap: 2rem;
+            width: 100%;
+            max-width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    padding-top: 3rem;
+
+    .wrapper {
+      .inner {
+        .headings {
+          .title {
+            font-size: 2rem;
+            line-height: 3rem;
+          }
+        }
+      }
+    }
+  }
+}

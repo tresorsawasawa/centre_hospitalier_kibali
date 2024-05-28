@@ -1,0 +1,49 @@
+@import '../../stylesheets/base/colors';
+
+.testimonials {
+  .wrapper {
+    .upperText {
+      .secTitle {
+        color: $primary;
+        border-bottom: 2px solid $grayColor;
+        width: auto;
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    padding-top: 3rem;
+
+    .wrapper {
+      .headings {
+        .heroText {
+          font-size: 2rem;
+          line-height: 2.5rem;
+          font-weight: 600;
+          max-width: 85%;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 550px) {
+    padding-top: 3rem;
+
+    .wrapper {
+      .headings {
+        .heroText {
+          font-size: 2rem;
+          line-height: 2.5rem;
+        }
+      }
+
+      .CarouselContainer {
+        .carousel-root {
+          .carousel {
+            max-width: 320px;
+          }
+        }
+      }
+    }
+  }
+}

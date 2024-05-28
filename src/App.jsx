@@ -1,7 +1,16 @@
+import { Outlet } from 'react-router-dom';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
+
 const App = () => (
-  <>
-    <h2>Hello world</h2>
-  </>
+  <div className="main">
+    <Header />
+
+    <main className="main">
+      <Outlet />
+    </main>
+    <Footer />
+  </div>
 );
 
 export default App;

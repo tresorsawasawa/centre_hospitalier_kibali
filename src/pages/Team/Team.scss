@@ -1,0 +1,63 @@
+@import '../../stylesheets/base/colors';
+
+.team {
+  @media screen and (max-width: 768px) {
+    .wrapper {
+      padding-top: 3rem;
+
+      .inner {
+        padding-top: 0;
+
+        .headings {
+          .heroText {
+            font-size: 2rem;
+            line-height: 2.5rem;
+            font-weight: 600;
+          }
+        }
+
+        .carousel {
+          .doctorsList {
+            .doctorItem {
+              height: auto;
+              width: 100%;
+
+              .teamItem {
+                flex-direction: column;
+
+                .leftCont {
+                  width: 100%;
+
+                  img {
+                    width: 100%;
+                    height: auto;
+                    border-radius: 0.5rem;
+                  }
+                }
+
+                .rightCont {
+                  width: 100%;
+                  padding: 0 1rem 1rem;
+
+                  .heading {
+                    margin-top: -1rem;
+                    gap: 0.3rem;
+
+                    .name {
+                      font-size: 1.2rem;
+                    }
+                  }
+                }
+
+                .description {
+                  margin-top: -0.5rem;
+                  margin-bottom: 1rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
